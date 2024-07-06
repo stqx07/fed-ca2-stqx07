@@ -1,18 +1,13 @@
 // Typewriting Animation
 
 const text = document.querySelector(".sec-text");
+const texts = ["Our Initiatives🤝", "What Can We Do?", "Scroll Down To Find Out More!👇"];
+let index = 0;
 
 const textLoad = () => {
-    setTimeout(() => {
-        text.textContent = "Our Initiatives🤝";
-    }, 0);
-    setTimeout(() => {
-        text.textContent = "What Can We Do?";
-    }, 4000);
-    setTimeout(() => {
-        text.textContent = "Scroll Down To Find Out More!👇";
-    }, 8000);
+    text.textContent = texts[index];
+    index = (index + 1) % texts.length;
 }
 
-textLoad();
-setInterval(textLoad, 12000);
+textLoad(); // Initial call to display the first text
+setInterval(textLoad, 4000); // Changes text every 4 seconds

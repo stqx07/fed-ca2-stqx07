@@ -1,21 +1,16 @@
 // Typewriting Animation
 
 const text = document.querySelector(".sec-text");
+const texts = ["Contact Me!☎️", "Fill Up Your Details!", "I Will Get Right Back To You!🤗"];
+let index = 0;
 
 const textLoad = () => {
-    setTimeout(() => {
-        text.textContent = "Contact Me!☎️";
-    }, 0);
-    setTimeout(() => {
-        text.textContent = "Fill Up Your Details!";
-    }, 4000);
-    setTimeout(() => {
-        text.textContent = "I Will Get Right Back To You!🤗";
-    }, 8000);
+    text.textContent = texts[index];
+    index = (index + 1) % texts.length;
 }
 
-textLoad();
-setInterval(textLoad, 12000);
+textLoad(); // Initial call to display the first text
+setInterval(textLoad, 4000); // Changes text every 4 seconds
 
 // Contact Me Form Validation
 

@@ -1,27 +1,5 @@
 // Typewriting Animation
 
-// const text = document.querySelector(".sec-text");
-
-// const textLoad = () => {
-//     setTimeout(() => {
-//         text.textContent = "About Me🙋‍♂️";
-//     }, 0);
-//     setTimeout(() => {
-//         text.textContent = "Values🙂";
-//     }, 4000);
-//     setTimeout(() => {
-//         text.textContent = "Personality😆";
-//     }, 8000);
-//     setTimeout(() => {
-//         text.textContent = "Interests🤗";
-//     }, 12000);
-// }
-
-// textLoad();
-// setInterval(textLoad, 16000);
-
-// Typewriting Animation
-
 const text = document.querySelector(".sec-text");
 const texts = ["About Me🙋‍♂️", "Values🙂", "Personality😆", "Interests🤗"];
 let index = 0;

@@ -1,21 +1,16 @@
 // Typewriting Animation
 
 const text = document.querySelector(".sec-text");
+const texts = ["Feedback🙂", "What Can Be Improved?🤔", "Your Feedback Is Important!🤗"];
+let index = 0;
 
 const textLoad = () => {
-    setTimeout(() => {
-        text.textContent = "Feedback🙂";
-    }, 0);
-    setTimeout(() => {
-        text.textContent = "What Can Be Improved?🤔";
-    }, 4000);
-    setTimeout(() => {
-        text.textContent = "Your Feedback Is Important!🤗";
-    }, 8000);
+    text.textContent = texts[index];
+    index = (index + 1) % texts.length;
 }
 
-textLoad();
-setInterval(textLoad, 12000);
+textLoad(); // Initial call to display the first text
+setInterval(textLoad, 4000); // Changes text every 4 seconds
 
 // Feedback Form Validation
 
